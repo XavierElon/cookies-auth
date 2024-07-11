@@ -1,8 +1,9 @@
+import { logout } from '@/actions'
 import React from 'react'
 
 export default function logoutForm() {
   return (
-    <form>
+    <form action={logout}>
       <button>Logout</button>
     </form>
   )
