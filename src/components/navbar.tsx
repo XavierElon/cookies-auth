@@ -1,7 +1,13 @@
 import Link from 'next/link'
 import LogoutForm from './logoutForm'
+import { getIronSession } from 'iron-session'
+import { getSession } from '@/actions'
 
-const Navbar = () => {
+const Navbar = async () => {
+  const session = await getSession()
+
+  console.log(session)
+
   return (
     <nav>
       <Link href="/">Home</Link>
