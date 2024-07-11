@@ -5,10 +5,11 @@ export interface SessionData {
   username?: string
   img?: string
   isPro?: boolean
+  isLoggedIn: boolean
 }
 
-if (!process.env.SECRET_KEY) {
-  throw new Error('SECRET_KEY environment variable is not set')
+export const defaultSession: SessionData = {
+  isLoggedIn: false
 }
 
 export const sessionOptions: SessionOptions = {
